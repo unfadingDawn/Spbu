@@ -1,0 +1,3 @@
+/home/yrii/spbu/parralells/matrices/cmake-build-debug/CMakeFiles/matrices.dir
+/home/yrii/spbu/parralells/matrices/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yrii/spbu/parralells/matrices/cmake-build-debug/CMakeFiles/rebuild_cache.dir
