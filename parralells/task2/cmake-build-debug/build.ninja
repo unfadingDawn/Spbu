@@ -55,12 +55,6 @@ build CMakeFiles/task2.dir/src/main.cpp.o: CXX_COMPILER__task2_unscanned_Debug /
   OBJECT_DIR = CMakeFiles/task2.dir
   OBJECT_FILE_DIR = CMakeFiles/task2.dir/src
 
-build CMakeFiles/task2.dir/src/program.cpp.o: CXX_COMPILER__task2_unscanned_Debug /home/yrii/spbu/parralells/task2/src/program.cpp || cmake_object_order_depends_target_task2
-  DEP_FILE = CMakeFiles/task2.dir/src/program.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/task2.dir
-  OBJECT_FILE_DIR = CMakeFiles/task2.dir/src
-
 build CMakeFiles/task2.dir/src/util.cpp.o: CXX_COMPILER__task2_unscanned_Debug /home/yrii/spbu/parralells/task2/src/util.cpp || cmake_object_order_depends_target_task2
   DEP_FILE = CMakeFiles/task2.dir/src/util.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
@@ -75,7 +69,7 @@ build CMakeFiles/task2.dir/src/util.cpp.o: CXX_COMPILER__task2_unscanned_Debug /
 #############################################
 # Link the executable task2
 
-build task2: CXX_EXECUTABLE_LINKER__task2_Debug CMakeFiles/task2.dir/src/main.cpp.o CMakeFiles/task2.dir/src/program.cpp.o CMakeFiles/task2.dir/src/util.cpp.o
+build task2: CXX_EXECUTABLE_LINKER__task2_Debug CMakeFiles/task2.dir/src/main.cpp.o CMakeFiles/task2.dir/src/util.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/task2.dir
   POST_BUILD = :
