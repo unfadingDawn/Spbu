@@ -1,6 +1,0 @@
-# ninja log v6
-1	189	1743841053439108004	CMakeFiles/task2.dir/main.cpp.o	40cd5196173c4eab
-331	375	1745429199654135695	task2	4f86fb7d91226913
-1	134	1745429199324123184	CMakeFiles/task2.dir/src/program.cpp.o	1e92c0347acb9f20
-1	125	1745428257347847839	CMakeFiles/task2.dir/src/util.cpp.o	518b291054160d3d
-1	331	1745429199324123184	CMakeFiles/task2.dir/src/main.cpp.o	a394853ca8bfc17d
