@@ -1,0 +1,70 @@
+Тестирование проводилось на случайных одномерных массивах из 110 элементов, значения которых находятся в диапозоне от 0 до 100
+Все вычисления проводились с 7-ю потоками
+
+Mutex большей гранулярности
+
+887 microseconds
+718 microseconds
+541 microseconds
+553 microseconds
+531 microseconds
+593 microseconds
+616 microseconds
+603 microseconds
+603 microseconds
+753 microseconds
+593 microseconds
+636 microseconds
+770 microseconds
+911 microseconds
+673 microseconds
+
+Среднее значение - 665,4 microseconds
+
+try_lock с откатом
+
+835 microseconds
+724 microseconds
+1027 microseconds
+756 microseconds
+627 microseconds
+761 microseconds
+655 microseconds
+743 microseconds
+891 microseconds
+902 microseconds
+599 microseconds
+684 microseconds
+820 microseconds
+647 microseconds
+833 microseconds
+
+Среднее значение - 766,93 microseconds
+
+Набор замков в правильном порядке
+
+800 microseconds
+743 microseconds
+548 microseconds
+1148 microseconds
+629 microseconds
+641 microseconds
+886 microseconds
+658 microseconds
+642 microseconds
+1044 microseconds
+623 microseconds
+641 microseconds
+812 microseconds
+645 microseconds
+701 microseconds
+639 microseconds
+
+Среднее значение - 737,5 microseconds
+
+
+--------------------------------------------------------
+
+
+
+
