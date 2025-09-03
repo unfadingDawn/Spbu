@@ -1,6 +1,7 @@
 #include "evals.h"
 
 #include <cstdlib>
+#include <mutex>
 
 namespace math {
 void Determinant(Matrix const& matrix, int& res, int level /* = 1 */) {
@@ -20,6 +21,7 @@ void Determinant(Matrix const& matrix, int& res, int level /* = 1 */) {
             thread.join();
         }
         for (int i = 0; i < temp_matrix.size(); i++) {
+            mutexes[i].unlock();
             res += (i % 2 ? -1 : 1) * dets[i] * temp_matrix[i][0];
         }
     } else {

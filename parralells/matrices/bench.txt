@@ -299,3 +299,18 @@ level: 2
 0 milliseconds
 3
 
+5x5
+level: 2
+95 milliseconds
+-4348
+
+7x7
+level: 3
+1943 milliseconds
+-42952
+
+5x5
+level: 2
+69 milliseconds
+-4348
+

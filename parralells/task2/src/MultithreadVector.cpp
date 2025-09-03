@@ -12,29 +12,29 @@ namespace multithread_vector {
     //     const std::vector<int> indexes = utils::get_rand_indexes(vector.numbers.size());
     //     int sum = 0;
     //     for (const int index : indexes) {
-    //         vector.mutexes[index].lock();
+    //         // vector.mutexes[index].lock();
     //         sum += vector.numbers[index];
     //     }
     //     for (const int index : indexes) {
     //         vector.numbers[index] = sum;
     //     }
-    //     for (const int index : indexes) {
-    //         vector.mutexes[index].unlock();
-    //     }
+    //     // for (const int index : indexes) {
+    //         // vector.mutexes[index].unlock();
+    //     // }
     // }
 
     /* mutex большей гранулярности */
-    void MultithreadVector::GetRandomSum(MultithreadVector &vector) {
-        std::lock_guard<std::mutex> lock(vector.mutexes[0]);
-        const std::vector<int> indexes = utils::get_rand_indexes(vector.numbers.size());
-        int sum = 0;
-        for (const int index : indexes) {
-            sum += vector.numbers[index];
-        }
-        for (const int index : indexes) {
-            vector.numbers[index] = sum;
-        }
-    }
+    // void MultithreadVector::GetRandomSum(MultithreadVector &vector) {
+    //     std::lock_guard<std::mutex> lock(vector.mutexes[0]);
+    //     const std::vector<int> indexes = utils::get_rand_indexes(vector.numbers.size());
+    //     int sum = 0;
+    //     for (const int index : indexes) {
+    //         sum += vector.numbers[index];
+    //     }
+    //     for (const int index : indexes) {
+    //         vector.numbers[index] = sum;
+    //     }
+    // }
 
     /* try_lock с откатом */
     // void MultithreadVector::GetRandomSum(MultithreadVector &vector) {
@@ -69,22 +69,22 @@ namespace multithread_vector {
 
 
     /* Протокол - набор замков в правильном порядке */
-    // void MultithreadVector::GetRandomSum(MultithreadVector &vector) {
-    //     std::vector<int> indexes = utils::get_rand_indexes(vector.numbers.size());
-    //     std::sort(indexes.begin(), indexes.end());
-    //     int sum = 0;
-    //     for (const int index : indexes) {
-    //         while (!vector.mutexes[index].try_lock()) {
-    //         }
-    //         sum += vector.numbers[index];
-    //     }
-    //     for (const int index : indexes) {
-    //         vector.numbers[index] = sum;
-    //     }
-    //     for (const int index : indexes) {
-    //         vector.mutexes[index].unlock();
-    //     }
-    // }
+    void MultithreadVector::GetRandomSum(MultithreadVector &vector) {
+        std::vector<int> indexes = utils::get_rand_indexes(vector.numbers.size());
+        std::sort(indexes.begin(), indexes.end());
+        int sum = 0;
+        for (const int index : indexes) {
+            while (!vector.mutexes[index].try_lock()) {
+            }
+            sum += vector.numbers[index];
+        }
+        for (const int index : indexes) {
+            vector.numbers[index] = sum;
+        }
+        for (const int index : indexes) {
+            vector.mutexes[index].unlock();
+        }
+    }
 
     int MultithreadVector::GetNumber(const int pos) {
         if (pos >= numbers.size()) {

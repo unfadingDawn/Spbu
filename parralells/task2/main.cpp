@@ -7,8 +7,8 @@
 #include "src/MultithreadVector.h"
 
 int main() {
-    int quantity_of_threads = 7;
-    int size_of_array = 110;
+    int quantity_of_threads = 3;
+    int size_of_array = 4;
     const std::vector<int> nums = utils::get_random_array(size_of_array);
     std::cout << '\n';
     multithread_vector::MultithreadVector vec(nums);

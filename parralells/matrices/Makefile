@@ -13,7 +13,7 @@ LIB = -lncurses
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) -o $(TARGET) $(LIB)
+	$(CC) $(CFLAGS) $(OBJECTS) -o $(TARGET)
 %.o: %.cpp
 	$(CC) $< -c $@
 clean:

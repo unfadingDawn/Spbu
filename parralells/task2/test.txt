@@ -63,8 +63,80 @@ try_lock с откатом
 Среднее значение - 737,5 microseconds
 
 
+Тестирование проводилось на случайных одномерных массивах из 1100 элементов, значения которых находятся в диапозоне от 0 до 100
+Все вычисления проводились с 11-ю потоками
 --------------------------------------------------------
+Mutex большей гранулярности
 
+606 microseconds
+651 microseconds
+643 microseconds
+529 microseconds
+657 microseconds
+633 microseconds
+554 microseconds
+515 microseconds
+550 microseconds
+609 microseconds
+730 microseconds
+751 microseconds
+764 microseconds
+589 microseconds
+521 microseconds
 
+Минимальное -- 521 микросекунд
+Максимальное -- 764 микросекунд
+Среднее - 620 микросекунд
+--
 
+try_lock с откатом
 
+622 microseconds
+614 microseconds
+753 microseconds
+609 microseconds
+707 microseconds
+649 microseconds
+799 microseconds
+627 microseconds
+698 microseconds
+530 microseconds
+788 microseconds
+625 microseconds
+698 microseconds
+614 microseconds
+803 microseconds
+
+Минимальное -- 530 микросекунд
+Максимальное -- 803 микросекунд
+Среднее -- 675 микросекунд
+----
+
+Набор замков в правильном порядке
+
+546 microseconds
+599 microseconds
+538 microseconds
+644 microseconds
+972 microseconds
+678 microseconds
+537 microseconds
+659 microseconds
+574 microseconds
+619 microseconds
+536 microseconds
+542 microseconds
+689 microseconds
+526 microseconds
+625 microseconds
+
+Минимальное -- 526 микросекунд
+Максимальное -- 972 микросекунд
+Среднее -- 618 микросекунд
+
+31602 microseconds
+26966 microseconds
+23156 microseconds
+25805 microseconds
+33612 microseconds
+28631 microseconds
