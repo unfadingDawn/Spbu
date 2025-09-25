@@ -1,13 +1,12 @@
 #include <iostream>
 #include <thread>
-#include <bits/ostream.tcc>
 
 #include "src/HashMap.h"
 #include "src/utils.h"
 
 int main() {
     std::vector<std::thread> threads;
-    const int a = 500;
+    int const a = 500;
     auto map = multithread_container::HashMap(a);
     threads.emplace_back(utils::add_nums, std::ref(map), 1, 100);
     threads.emplace_back(utils::add_nums, std::ref(map), 101, 200);
@@ -19,7 +18,7 @@ int main() {
     threads.emplace_back(utils::add_nums, std::ref(map), 701, 800);
     threads.emplace_back(utils::add_nums, std::ref(map), 801, 900);
     threads.emplace_back(utils::add_nums, std::ref(map), 901, 1000);
-    for (auto& thread : threads) {
+    for (auto &thread : threads) {
         thread.join();
     }
     for (int i = 0; i < 1000; i++) {
@@ -33,7 +32,7 @@ int main() {
     threads.emplace_back(utils::remove_nums, std::ref(map), 250, 500);
     threads.emplace_back(utils::check_nums, std::ref(map), 100, 240);
     threads.emplace_back(utils::check_nums, std::ref(map), 240, 500);
-    for (auto& thread : threads) {
+    for (auto &thread : threads) {
         if (thread.joinable()) {
             thread.join();
         }

@@ -1,0 +1,45 @@
+Logging with condition_variable, queue with size
+Execution time: 0.157029 seconds
+Execution time: 0.156855 seconds
+Execution time: 0.15494 seconds
+Execution time: 0.156804 seconds
+Execution time: 0.156744 seconds
+Execution time: 0.156988 seconds
+
+Avg time: 0.15656 seconds
+
+Logging without condition_variable, queue with size
+Execution time: 0.148254 seconds
+Execution time: 0.164021 seconds
+Execution time: 0.148648 seconds
+Execution time: 0.168177 seconds
+Execution time: 0.16845 seconds
+Execution time: 0.168689 seconds
+
+Avg time: 0.161039 seconds
+
+Logging without condition_variable, queue with size
+Execution time: 0.153997 seconds
+Execution time: 0.153923 seconds
+Execution time: 0.153638 seconds
+Execution time: 0.153838 seconds
+Execution time: 0.153867 seconds
+Execution time: 0.154063 seconds
+
+Avg time: 0.153887 seconds
+
+Logging without condition_variable, queue with size
+Execution time: 0.168113 seconds
+Execution time: 0.168455 seconds
+Execution time: 0.168347 seconds
+Execution time: 0.167968 seconds
+Execution time: 0.168344 seconds
+Execution time: 0.168231 seconds
+
+Avg time: 0.168243 seconds
+Execution time: 0.187183 seconds
+Execution time: 0.221908 seconds
+Execution time: 0.184913 seconds
+Execution time: 0.200984 seconds
+Execution time: 0.204505 seconds
+Execution time: 0.199487 seconds
